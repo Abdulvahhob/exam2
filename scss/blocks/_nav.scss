@@ -1,0 +1,42 @@
+.nav__list {
+  @include reset-list;
+  @include flex;
+  margin-right: auto;
+}
+
+.nav__item-link {
+  @include fonts;
+  font-size: 15px;
+  line-height: 25px;
+  color: $dim-grey;
+
+  &:hover {
+    color: $yellow;
+    cursor: pointer;
+  }
+}
+
+.nav__item {
+  margin-right: 32px;
+}
+
+.nav__item:last-child {
+  margin: 0;
+}
+
+@media screen and (max-width: $mobile) {
+  .header__list {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: auto;
+  }
+  
+  .header__item {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+
+  .header__item:last-child {
+    margin-bottom: 0;
+  }
+}

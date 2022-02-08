@@ -1,0 +1,24 @@
+.about-travel__container {
+  padding-top: 120px;
+}
+
+@media screen and (max-width: $tablet) {
+  .about-travel__container {
+    padding-top: 144px;
+    padding-bottom: 120px;
+  }
+
+  .about-travel__learn-more {
+    display: none;
+  }
+
+  .about-travel__item-text {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .about-travel__container {
+    padding-top: 72px;
+  }
+}

@@ -1,0 +1,17 @@
+.learn-more {
+  @include fonts;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+  padding: 14px 44px;
+  background-color: $yellow;
+  border: 3px solid $yellow;
+
+  &:hover {
+    color: $yellow;
+    border: 3px solid $yellow;
+    background-color: transparent;
+  }
+}

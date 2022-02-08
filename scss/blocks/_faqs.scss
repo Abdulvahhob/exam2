@@ -1,0 +1,135 @@
+.faqs__container {
+  padding-top: 120px;
+  padding-bottom: 160px;
+}
+
+.faqs__title {
+  @include fonts;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: -2.14286px;
+  color: $dark-navy;
+  margin-bottom: 64px;
+}
+
+.faqs__content {
+  @include flex;
+  justify-content: space-between;
+}
+
+.faqs__content--first {
+  margin-bottom: 64px;
+}
+
+.faqs__content-title {
+  @include fonts;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -1.78571px;
+  color: $dark-navy;
+}
+
+.faqs__list {
+  @include reset-list;
+  width: 730px;
+}
+
+.faqs__item {
+  width: 100%;
+  background-color: $snow;
+  margin-bottom: 16px;
+  padding: 32px 40px;
+
+  &:hover {
+    background-color: $light-yellow;
+  }
+}
+
+.faqs__item:last-child {
+  margin-bottom: 0;
+}
+
+.faqs__item-btn {
+  width: 100%;
+  @include fonts;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07143px;
+  color: $dark-navy;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  background-image: url('../img/close.svg');
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.faqs__item-open {
+  background-image: url('../img/open.svg');
+}
+
+
+.faqs__item-text {
+  font-size: 15px;
+  line-height: 25px;
+  color: $dark-navy;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: $tablet) {
+  .faqs__container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .faqs__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .faqs__content-title {
+    margin-bottom: 32px;
+  }
+
+  .faqs__list {
+    width: 689px;
+  }
+
+  .faqs__item {
+    margin-bottom: 24px;
+  }
+
+}
+
+@media screen and (max-width: $mobile) {
+  .faqs__container {
+    padding-top: 145px;
+  }
+
+  .faqs__title {
+    margin-bottom: 48px;
+  }
+
+  .faqs__list {
+    width: 100%;
+  }
+
+  .faqs__item {
+    padding-right: 28px;
+    padding-left: 32px;
+  }
+
+  .faqs__content-title {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+  }
+
+  .faqs__item-btn {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.803571px;
+    padding-right: 36px;
+  }
+}

@@ -1,0 +1,154 @@
+.deliver__container {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+.deliver__list {
+  @include reset-list;
+  @include flex;
+  position: relative;
+}
+
+.deliver__list::before {
+  content: '';
+  display: block;
+  width: 974px;
+  height: 1px;
+  border: 15px solid $light-grey;
+  position: absolute;
+  top: 32px;
+  left: -166px;
+  z-index: -1;
+}
+
+.deliver__item {
+  width: 350px;
+  margin-right: 30px;
+}
+
+.deliver__item:last-child {
+  margin-right: 0;
+}
+
+.deliver__item::before {
+  content: '';
+  display: block;
+  width: 96px;
+  height: 96px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.deliver__item--phone::before {
+  background-image: url('../img/phone.svg');
+}
+
+
+
+.deliver__item--scooter::before {
+  background-image: url('../img/scooter.svg');
+}
+
+.deliver__item--ride::before {
+  background-image: url('../img/ride.svg');
+}
+
+
+.deliver__item-title {
+  @include fonts;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07143px;
+  color: $dark-navy;
+  margin-bottom: 27px;
+  margin-top: 40px;
+}
+
+.deliver__item-text {
+  font-size: 15px;
+  line-height: 25px;
+  color: $dim-grey;
+}
+
+@media screen and (max-width: $tablet) {
+  .deliver__container {
+    padding-top: 122px;
+    padding-bottom: 145px;
+  }
+
+  .deliver__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .deliver__item {
+    width: 573px;
+    margin-right: 0;
+    margin-bottom: 40px;
+    padding-left: 175px;
+    position: relative;
+  }
+
+  .deliver__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .deliver__item-title {
+    margin-top: 0;
+  }
+
+  .deliver__item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .deliver__list::before {
+    transform: rotate(90deg);
+    left: -380px;
+    top: -113px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .deliver__container {
+    padding-top: 120px;
+    padding-bottom: 120;
+  }
+
+  .deliver__list {
+    width: 100%;
+    text-align: center;
+  }
+
+  .deliver__item {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 48px;
+  }
+
+  .deliver__item-title {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.892857px;
+    margin-bottom: 24px;
+    padding-top: 80px;
+  }
+
+  .deliver__item-text {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .deliver__item::before {
+    width: 56px;
+    height: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .deliver__list::before {
+    display: none;
+  }
+}
